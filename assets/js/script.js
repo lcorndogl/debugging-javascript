@@ -83,8 +83,6 @@ function showResults() {
 }
 
 function resetQuiz() {
-    resultsContainer.innerHTML = '';
-
     buildQuiz();
 
     submitButton.innerHTML = 'Submit Quiz';
