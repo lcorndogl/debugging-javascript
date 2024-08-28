@@ -72,7 +72,7 @@ function showResults() {
 
         if (userAnswer == quizQuestions[questionNumber].correctAnswer) {
             numCorrect ++;
-            answerContainers[questionNumber].style.color = 'lightgreen';
+            answerContainers[questionNumber].style.color = 'blue';
         } else {
             answerContainers[questionNumber].style.color = 'red';
         }
