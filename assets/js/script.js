@@ -1,5 +1,5 @@
 const quizContainer = document.getElementById('quiz');
-const submitButton = document.getElementById('submit');
+const button = document.getElementById('button');
 
 const quizQuestions = [
     {
@@ -72,24 +72,24 @@ function showResults() {
 
         if (userAnswer == quizQuestions[questionNumber].correctAnswer) {
             numCorrect ++;
-            answerContainers[questionNumber].style.color = 'blue';
+            answerContainers[questionNumber].style.color = 'lightgreen';
         } else {
             answerContainers[questionNumber].style.color = 'red';
         }
     }
 
-    submitButton.innerHTML = 'Try Again';
-    submitButton.removeEventListener('click', showResults);
+    button.innerHTML = 'Try Again';
+    button.removeEventListener('click', showResults);
 }
 
 function resetQuiz() {
     buildQuiz();
 
-    submitButton.innerHTML = 'Submit Quiz';
-    submitButton.removeEventListener('click', resetQuiz);
-    submitButton.addEventListener('click', showResults);
+    button.innerHTML = 'Submit Quiz';
+    button.removeEventListener('click', resetQuiz);
+    button.addEventListener('click', showResults);
 }
 
 buildQuiz();
 
-submitButton.addEventListener('click', showResults);
+button.addEventListener('click', showResults);
