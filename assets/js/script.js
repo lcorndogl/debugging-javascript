@@ -1,5 +1,4 @@
 const quizContainer = document.getElementById('quiz');
-const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
 
 const quizQuestions = [
@@ -78,8 +77,6 @@ function showResults() {
             answerContainers[questionNumber].style.color = 'red';
         }
     }
-
-    resultsContainer.innerHTML = `${numCorrect} out of ${quizQuestions.length}`;
 
     submitButton.innerHTML = 'Try Again';
     submitButton.removeEventListener('click', showResults);
